@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café Signup</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="signup-container">
+    <div class="form-header">
+      <h1>Welcome to Café Delight</h1>
+      <p>Please select your role to continue signing up</p>
+    </div>
+    
+    <form id="role-selection-form" class="signup-form">
+      <label for="role">Who are you?</label>
+      <select id="role" required>
+        <option value="" disabled selected>Select Role</option>
+        <option value="customer">Customer</option>
+        <option value="employee">Employee</option>
+      </select>
+      <button type="button" onclick="showForm()">Next</button>
+    </form>
+
+    <form id="customer-signup-form" class="signup-form hidden">
+      <h2>Customer Signup</h2>
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <input type="password" name="OTP" placeholder="Enter OTP" required>
+      
+      <button type="submit">Sign Up as Customer</button>
+      <button type="button" class="back-button" onclick="resetForm()">Back</button>
+    </form>
+
+    <form id="employee-signup-form" class="signup-form hidden">
+      <h2>Employee Signup</h2>
+      <input type="text" name="employeeId" placeholder="Employee ID" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <button type="submit">Sign Up as Employee</button>
+      <button type="button" class="back-button" onclick="resetForm()">Back</button>
+    </form>
+  </div>
+</body>
+</html>
